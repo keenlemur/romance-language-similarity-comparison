@@ -1,11 +1,11 @@
 # Romance language similarity comparison by Justin Vastola
-# This is a tool to compare similarity of sentences in romance languages using jaccard similarity
-# Note that jaccard similarity for language comparison is less accurate than dedicated Natural Language Processing (NLP) tools 
+# This is a tool to compare similarity of sentences in romance languages using Jaccard similarity
+# Note that Jaccard similarity for language comparison is less accurate than dedicated Natural Language Processing (NLP) tools 
 
 import statistics
 
 # 1. JACCARD SIMILARITY
-# Define a jaccard similarity function
+# Define a Jaccard similarity function
 # This determines how similar a sentence is to another sentence
 def jaccard_similarity(a, b):
     # Convert to set
@@ -27,7 +27,7 @@ FR5initial = "Mon nom est Maria"
 
 # 3. SPLIT SENTENCES INTO STRINGS
 # Split the words in a sentence into separate strings within a list
-# We do this because jaccard similarity requires separate strings for accuracy
+# We do this because Jaccard similarity requires separate strings for accuracy
 # The list ["mi", "nombre", "es"] is more accurate than ["mi nombre es"] because the first example is multiple strings and the second is one string
 # Instead of having to create a list like ["mi", "nombre", "es"] for ES3initial, you can simply write "mi nombre es"
 # Instead of making each word a string yourself (by adding quotation marks around each word), this automatically does the work
@@ -50,7 +50,7 @@ print("")
 
 
 # 5. JACCARD SIMILARITY OF SENTENCES
-# Determine jaccard similarity of different sentences
+# Determine Jaccard similarity of different sentences
 # Multiply by 100 to move decimal point two places rightward (for example, .98768 becomes 98.768)
 IT1_PT2initial = (jaccard_similarity(str(IT1), str(PT2))) * 100
 IT1_ES3initial = (jaccard_similarity(str(IT1), str(ES3))) * 100
@@ -68,7 +68,7 @@ CA4_FR5initial = (jaccard_similarity(str(CA4), str(FR5))) * 100
 
 
 # 6. ROUND JACCARD SIMILARITY RESULT
-# Round the jaccard similarity result to two places (for example, 98.768 becomes 98.77)
+# Round the Jaccard similarity result to two places (for example, 98.768 becomes 98.77)
 IT1_PT2 = round(IT1_PT2initial, 2)
 IT1_ES3 = round(IT1_ES3initial, 2)
 IT1_CA4 = round(IT1_CA4initial, 2)
